@@ -1,3 +1,5 @@
+|PyPI| |PyPIDownloads| |Docs|
+
 scVelo - RNA velocity generalized through dynamical modeling
 ============================================================
 
@@ -68,7 +70,8 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
    about
    installation
    api
-   usage
+   release_notes
+   references
 
 .. toctree::
    :caption: Tutorials
@@ -76,7 +79,48 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
    :hidden:
 
    getting_started
+   VelocityBasics
+   DynamicalModeling
+   DifferentialKinetics
+   vignettes/index
+
+.. toctree::
+   :caption: Perspectives
+   :maxdepth: 1
+   :hidden:
+
+   perspectives/index
+
+
+.. |PyPI| image:: https://img.shields.io/pypi/v/scvelo.svg
+   :target: https://pypi.org/project/scvelo
+
+.. |PyPIDownloads| image:: https://pepy.tech/badge/scvelo
+   :target: https://pepy.tech/project/scvelo
+
+.. |Docs| image:: https://readthedocs.org/projects/scvelo/badge/?version=latest
+   :target: https://scvelo.readthedocs.io
+
+.. |travis| image:: https://travis-ci.org/theislab/scvelo.svg?branch=master
+   :target: https://travis-ci.org/theislab/scvelo
+
+.. _scanpy: https://scanpy.readthedocs.io
+
+.. _calendly: https://calendly.com/scvelo
 
 .. |br| raw:: html
 
   <br/>
+
+.. |meet| raw:: html
+
+  <!-- Calendly link widget begin -->
+  <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript"></script>
+  <a href="" onclick="Calendly.initPopupWidget({url: 'https://calendly.com/scvelo'});return false;">here</a>
+  <!-- Calendly link widget end -->
+
+.. |dim| raw:: html
+
+   <span class="__dimensions_badge_embed__" data-id="pub.1129830274" data-style="small_rectangle"></span>
+   <script async src="https://badge.dimensions.ai/badge.js" charset="utf-8"></script>

@@ -65,10 +65,17 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
    :maxdepth: 1
    :hidden:
 
+   about
    installation
    api
    usage
 
+.. toctree::
+   :caption: Tutorials
+   :maxdepth: 1
+   :hidden:
+
+   getting_started
 
 .. |br| raw:: html
 

@@ -1,17 +1,14 @@
 Installation
 ------------
 
-scVelo requires Python 3.6 or later. We recommend to use Miniconda_.
+M3K requires Python 3.6 or later. We recommend to use Miniconda_.
 
 PyPI
 ^^^^
 
-Install scVelo from PyPI_ using::
+Install M3K from XXXXX using::
 
-    pip install -U scvelo
-
-``-U`` is short for ``--upgrade``.
-If you get a ``Permission denied`` error, use ``pip install -U scvelo --user`` instead.
+    XXXXX
 
 
 Development Version
@@ -19,11 +16,11 @@ Development Version
 
 To work with the latest development version, install from GitHub_ using::
 
-    pip install git+https://github.com/theislab/scvelo@develop
+    pip install git+https://github.com/cbiagii/M3K-docs@develop
 
 or::
 
-    git clone https://github.com/theislab/scvelo && cd scvelo
+    git clone https://github.com/cbiagii/M3K-docs && cd M3K-docs
     git checkout --track origin/develop
     pip install -e .
 
@@ -53,18 +50,6 @@ Parts of scVelo (directed PAGA and Louvain modularity) require (optional)::
 Using fast neighbor search via `hnswlib <https://github.com/nmslib/hnswlib>`_ further requires (optional)::
 
     pip install pybind11 hnswlib
-
-
-Jupyter Notebook
-^^^^^^^^^^^^^^^^
-
-To run the tutorials in a notebook locally, please install::
-
-   conda install notebook
-
-and run ``jupyter notebook`` in the terminal. If you get the error ``Not a directory: 'xdg-settings'``,
-use ``jupyter notebook --no-browser`` instead and open the url manually (or use this
-`bugfix <https://github.com/jupyter/notebook/issues/3746#issuecomment-444957821>`_).
 
 
 If you run into issues, do not hesitate to approach us or raise a `GitHub issue`_.

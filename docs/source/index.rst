@@ -17,6 +17,11 @@ Contents
 --------
 
 .. toctree::
-
+   :caption: Main
+   
    usage
+
+.. toctree::
+   :caption: Tutorials
+   
    api

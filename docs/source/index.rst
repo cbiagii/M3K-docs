@@ -64,8 +64,8 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
 
 .. toctree::
    :caption: Main
-   :maxdepth: -1
-   :hidden:
+   :maxdepth: 2
+   :includehidden:
 
    about
    installation
@@ -75,8 +75,8 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
 
 .. toctree::
    :caption: Tutorials
-   :maxdepth: -1
-   :hidden:
+   :maxdepth: 2
+   :includehidden:
 
    getting_started
    VelocityBasics
@@ -86,8 +86,8 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
 
 .. toctree::
    :caption: Perspectives
-   :maxdepth: -1
-   :hidden:
+   :maxdepth: 2
+   :includehidden:
 
    perspectives/index
 

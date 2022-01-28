@@ -119,8 +119,8 @@ author = "Volker Bergen"
 title = "RNA Velocity generalized through dynamical modeling"
 copyright = f"{datetime.now():%Y}, {author}"
 
-version = scvelo.__version__.replace(".dirty", "")
-release = version
+#version = scvelo.__version__.replace(".dirty", "")
+release = 1.0
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 pygments_style = "sphinx"
 todo_include_todos = False

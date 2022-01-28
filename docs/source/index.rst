@@ -1,5 +1,5 @@
-Welcome to Lumache's documentation!
-===================================
+M3K: An efficient software for pre-processing datasets from single cell RNA-seq experiments
+===========================================================================================
 
 **Lumache** (/lu'make/) is a Python library for cooks and food lovers
 that creates recipes mixing random ingredients.

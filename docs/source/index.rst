@@ -64,7 +64,7 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
 
 .. toctree::
    :caption: Main
-   :maxdepth: 1
+   :maxdepth: -1
    :hidden:
 
    about
@@ -75,7 +75,7 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
 
 .. toctree::
    :caption: Tutorials
-   :maxdepth: 1
+   :maxdepth: -1
    :hidden:
 
    getting_started
@@ -86,7 +86,7 @@ For further information visit `scvelo.org <https://scvelo.org>`_.
 
 .. toctree::
    :caption: Perspectives
-   :maxdepth: 1
+   :maxdepth: -1
    :hidden:
 
    perspectives/index

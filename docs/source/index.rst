@@ -20,8 +20,11 @@ Contents
    :caption: Main
    
    usage
+   about
+   api
+   release_notes
 
 .. toctree::
    :caption: Tutorials
    
-   api
+   getting_started

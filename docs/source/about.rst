@@ -1,9 +1,9 @@
 About M3K
 ------------
 
-.. image:: https://user-images.githubusercontent.com/31883718/67709134-a0989480-f9bd-11e9-8ae6-f6391f5d95a0.png
+.. image:: https://github.com/cbiagii/M3K-docs/raw/main/workflow.png
    :width: 300px
-   :align: left
+   :align: center
 
 Measuring gene activity in individual cells requires destroying these cells to read out their content, making it
 challenging to study dynamic processes and to learn about cellular decision making. The introduction of RNA velocity by

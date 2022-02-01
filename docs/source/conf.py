@@ -33,7 +33,7 @@ epub_show_urls = 'footnote'
 # -- Options for HTML output ----------------------------------------------
 html_theme = "sphinx_rtd_theme"
 html_theme_options = dict(navigation_depth=1, titles_only=True)
-
+html_static_path = ["_static"]
 #html_theme_options = {
 #    'globaltoc_collapse': True,
 #    'globaltoc_maxdepth': None,

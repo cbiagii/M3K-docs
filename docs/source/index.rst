@@ -17,8 +17,8 @@ Contents
    :maxdepth: 1
    :hidden:
 
-   usage
    about
+   installation
    api
    release_notes
 

@@ -27,9 +27,14 @@ intersphinx_disabled_domains = ['std']
 
 templates_path = ['_templates']
 
-# -- Options for HTML output
-
-html_theme = 'sphinx_rtd_theme'
-
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
+
+# -- Options for HTML output ----------------------------------------------
+html_theme = "sphinx_rtd_theme"
+html_theme_options = dict(navigation_depth=1, titles_only=True)
+
+#html_theme_options = {
+#    'globaltoc_collapse': True,
+#    'globaltoc_maxdepth': None,
+#}

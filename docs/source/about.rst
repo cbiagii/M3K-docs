@@ -7,6 +7,8 @@ The M3K software consists of several modules: initial quality control of a sampl
    :width: 900px
    :align: center
 
+
+
 Module 1: Quality control
 '''''''''''''''''''''''''
 This module serves as an initial sample quality check-up and consists of two parts, the FastQC software that generates basic sample statistics and quality check-ups [REF] and an additional program that calculates nucleotide frequencies of the first 30 nucleotide positions from Read 2 file. The latter program provides insights into potential sequencing problems. For example, let’s assume that the N nucleotide occurs at the last two nucleotide positions in UMI sequences at a high frequency for some reason. This would lead to a removal of the majority of reads by M3K software, since their UMI sequences would be marked as invalid, containing more than one mismatch. Thus, reads from faulty UMIs would be ignored, and the final output matrix would consist of only a fraction of reads of the original sample size.

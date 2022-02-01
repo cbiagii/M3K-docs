@@ -2,7 +2,7 @@ About M3K
 ------------
 
 .. image:: https://github.com/cbiagii/M3K-docs/raw/main/workflow.png
-   :width: 300px
+   :width: 900px
    :align: center
 
 Measuring gene activity in individual cells requires destroying these cells to read out their content, making it

@@ -7,7 +7,7 @@ The M3K software consists of several modules: initial quality control of a sampl
    :width: 900px
    :align: center
 
-\\
+\
 
 Module 1: Quality control
 '''''''''''''''''''''''''

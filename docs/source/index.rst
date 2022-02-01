@@ -1,5 +1,5 @@
 Welcome to M3K's documentation!
-===================================
+-------------------------------
 
 **M3K** is an efficient software for pre-processing datasets from single cell RNA-seq experiments.
 

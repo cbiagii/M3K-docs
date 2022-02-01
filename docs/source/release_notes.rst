@@ -2,10 +2,10 @@
 .. role:: smaller
 
 Release Notes
-=============
+-------------
 
 Version 0.2.4 :small:`Aug 26, 2021`
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Perspectives:
 
@@ -29,7 +29,7 @@ Bugfixes:
 
 
 Version 0.2.3 :small:`Feb 13, 2021`
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - `tl.recover_dynamics`: Multicore implementation :smaller:`thanks to M Klein, Y Schaelte, P Weiler`
 - CI now runs on GitHub Actions
@@ -41,14 +41,14 @@ New utility functions:
 
 
 Version 0.2.2 :small:`July 22, 2020`
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 - `tl.paga`: PAGA graph with velocity-directed edges.
 - Black code style
 
 
 Version 0.2.1 :small:`May 28, 2020`
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Bugfixes:
 
 - Correct identification of root cells in `tl.latent_time` :smaller:`thanks to M Lange`
@@ -56,7 +56,7 @@ Bugfixes:
 
 
 Version 0.2.0 :small:`May 12, 2020`
---------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 New vignettes:
 
 - RNA velocity basics
@@ -77,7 +77,7 @@ Plotting:
 
 
 Version 0.1.20 :small:`Sep 5, 2019`
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Tools:
 
 - `tl.recover_dynamics`: introduced a dynamical model inferring the full splicing kinetics, thereby identifying all kinetic rates of transcription, splicing and degradation.
@@ -95,7 +95,7 @@ Preprocessing:
 
 
 Version 0.1.14 :small:`Dec 7, 2018`
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Plotting:
 
 - New attriutes `arrow_length` and `arrow_size` for flexible adjustment of embedded velocities.
@@ -114,7 +114,7 @@ Preprocessing:
 
 
 Version 0.1.11 :small:`Oct 27, 2018`
-------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Plotting:
 
 - `settings.set_figure_params()`: adjust matplotlib defaults for beautified plots
@@ -137,7 +137,7 @@ Utils:
 
 
 Version 0.1.8 :small:`Sep 12, 2018`
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Plotting:
 
 - support saving plots as pdf, png etc.
@@ -156,12 +156,12 @@ Tools:
 
 
 Version 0.1.5 :small:`Sep 4, 2018`
-----------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 - Support writing loom files
 - Support both dense and sparse layers
 - Plotting bugfixes
 - Added pp.recipe_velocity()
 
 Version 0.1.2 :small:`Aug 21, 2018`
------------------------------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 First alpha release of scvelo.

@@ -33,7 +33,3 @@ html_theme = 'sphinx_rtd_theme'
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'
-
-.section #basic-2-flip-flop-synchronizer{
-     text-align:justify;
-}

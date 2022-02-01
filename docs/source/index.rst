@@ -14,7 +14,9 @@ Contents
 
 .. toctree::
    :caption: Main
-   
+   :maxdepth: 1
+   :hidden:
+
    usage
    about
    api
@@ -22,5 +24,10 @@ Contents
 
 .. toctree::
    :caption: Tutorials
+   :maxdepth: 1
+   :hidden:
    
    getting_started
+
+
+

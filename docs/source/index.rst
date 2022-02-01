@@ -14,7 +14,7 @@ Contents
 
 .. toctree::
    :caption: Main
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
 
    usage
@@ -24,10 +24,7 @@ Contents
 
 .. toctree::
    :caption: Tutorials
-   :maxdepth: 1
+   :maxdepth: 2
    :hidden:
-   
+
    getting_started
-
-
-

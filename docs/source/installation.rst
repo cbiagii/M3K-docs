@@ -14,20 +14,15 @@ It is possible to install the above programs directly from the source (see the m
 
     conda install -c bioconda fastqc star samtools
 
-There is also a `yml <https://github.com/alexdobin/STAR>`_ file with all the required dependencies above ready to be installed:
-
-
-
-
-conda env create -f /projects/cangen/coliveir/m3k.yml
+There is also a `yml <https://raw.githubusercontent.com/cbiagii/M3K-docs/main/m3k.yml>`_ file with all the required dependencies above ready to be installed:
+    
+    conda env create -f m3k.yml
 
 
 
 
 Generating genome indexes
 ^^^^^^^^^^^^^^^^^^^^^^^^^
-
-
 
 
 

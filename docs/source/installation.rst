@@ -3,8 +3,33 @@ Installation
 
 M3K requires ... We recommend to use ...
 
-PyPI
-^^^^
+Dependencies
+^^^^^^^^^^^^
+- `FastQC <https://www.bioinformatics.babraham.ac.uk/projects/fastqc/>`_
+- `STAR <https://github.com/alexdobin/STAR>`_
+- `samtools <https://www.htslib.org>`_
+- `R <https://www.r-project.org/>`_ - packages: *data.table*, *dplyr*, *DT*, *flexdashboard*, *ggplot2*, *htmltools*, *knitr*, *Matrix*, *R.utils*, *scales*.
+
+It is possible to install the above programs directly from the source (see the manual of each tool) or it is also possible to install from the conda environment::
+
+    conda install -c bioconda fastqc star samtools
+
+There is also a `yml <https://github.com/alexdobin/STAR>`_ file with all the required dependencies above ready to be installed:
+
+
+
+
+conda env create -f /projects/cangen/coliveir/m3k.yml
+
+
+
+
+Generating genome indexes
+^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
 
 #!/bin/bash
 
@@ -13,9 +38,10 @@ PyPI
 ### Paths (for execution on Cluster - to be setup by the user)
 export fastqc="/projects/cangen/milos/sc/testing/m3k/sw/FastQC/fastqc"
 export star="/projects/cangen/milos/sc/testing/m3k/sw/STAR-2.5.2b/bin/Linux_x86_64/STAR"
+export samtools="/projects/cangen/milos/sc/testing/m3k/sw/samtools-1.2/samtools"
 export hg19_dir="/projects/cangen/milos/sc/testing/m3k/genome/HomoSapiensGRCh37_STAR"
 export mm10_dir="/projects/cangen/milos/sc/testing/m3k/genome/mm10_STAR"
-export samtools="/projects/cangen/milos/sc/testing/m3k/sw/samtools-1.2/samtools"
+
 
 ### Locally used file paths - no need to be changed by the user
 export bc_v2="barcodes-737K-august-2016.txt"
@@ -25,12 +51,11 @@ export gtf_mm10_mn="gtf/mm38.93_exons_uniq_merged_final.gtf"
 export version="0.341"
 export gzip="gzip.sh"
 
-Install scVelo from PyPI_ using::
 
-    pip install -U scvelo
 
-``-U`` is short for ``--upgrade``.
-If you get a ``Permission denied`` error, use ``pip install -U scvelo --user`` instead.
+
+
+
 
 
 Development Version

@@ -1,7 +1,7 @@
 Getting Started
 ---------------
 
-Here, you will be briefly guided through the basics of how to use scVelo.
+Here, you will be briefly guided through the basics of how to use M3K.
 Once you are set, the following tutorials go straight into analysis of RNA velocity,
 latent time, driver identification and many more.
 

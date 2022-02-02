@@ -6,6 +6,25 @@ M3K requires ... We recommend to use ...
 PyPI
 ^^^^
 
+#!/bin/bash
+
+# TODO GTF files need to be re-generated to be on the safe side (Carlos) TODO
+
+### Paths (for execution on Cluster - to be setup by the user)
+export fastqc="/projects/cangen/milos/sc/testing/m3k/sw/FastQC/fastqc"
+export star="/projects/cangen/milos/sc/testing/m3k/sw/STAR-2.5.2b/bin/Linux_x86_64/STAR"
+export hg19_dir="/projects/cangen/milos/sc/testing/m3k/genome/HomoSapiensGRCh37_STAR"
+export mm10_dir="/projects/cangen/milos/sc/testing/m3k/genome/mm10_STAR"
+export samtools="/projects/cangen/milos/sc/testing/m3k/sw/samtools-1.2/samtools"
+
+### Locally used file paths - no need to be changed by the user
+export bc_v2="barcodes-737K-august-2016.txt"
+export bc_v3="barcodes-3M-february-2018.txt"
+export gtf_hg19_mn="gtf/hg37.75_exons_utrs_final_sorted2.gtf"
+export gtf_mm10_mn="gtf/mm38.93_exons_uniq_merged_final.gtf"
+export version="0.341"
+export gzip="gzip.sh"
+
 Install scVelo from PyPI_ using::
 
     pip install -U scvelo

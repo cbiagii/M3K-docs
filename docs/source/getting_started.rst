@@ -9,6 +9,52 @@ First of all, the input data for scVelo are two count matrices of pre-mature (un
 which can be obtained from standard sequencing protocols, using the `velocyto`_ or `loompy/kallisto`_
 counting pipeline.
 
+
+
+function help_msg() {
+    echo -e "\nM3K Software v. $version (Peifer Lab)"
+    echo -e "\nUsage:"
+    echo -e "\nSingle samples: run_m3k.sh <input_parameters>"
+    echo -e "Multiple samples: run_many.sh <input.conf>" 
+
+    echo -e "\nInput parameters:" 
+    echo -e "\t-f1\tFilename 1"
+    echo -e "\t-f2\tFilename 2"
+    echo -e "\t-o\tPath to output folder" 
+    echo -e "\t-m\tModule [0]"
+    echo -e "\t-u\tUMI length [10]"
+    echo -e "\t-sp1\t Smooting parameter [0.5]"
+    echo -e "\t-sp2\t Smooting parameter [0.5]"
+    echo -e "\t-sp3\t Smooting parameter [0.5]"
+    echo -e "\t-t\t Number of threads [12]"
+    echo -e "\t-c\t Number of chunks [24]\n"
+    
+    echo -e "Available modules:"
+    echo -e "\t0 - Whole pipeline and QC reports"
+    echo -e "\t1 - Split fastq files"
+    echo -e "\t2 - Extract and correct barcodes"
+    echo -e "\t3 - Map reads to reference genome(s)"
+    echo -e "\t4 - Merge BAM files"
+    echo -e "\t5 - Deduplicate and quantify reads"
+    echo -e "\t6 - Merge output files"
+    echo -e "\t7 - Identify viable cells & remove host cells\n"
+    
+    echo -e "\tExample of the <input.conf> file is provided in the M3K online manual."
+    echo -e "\n"
+    exit 1
+}
+
+
+- input.conf:
+### DO NOT LEAVE ANY EMPTY ROWS ### (command example: S03334_T_FF_01_1.fastq.gz S03334_T_FF_01_2.fastq.gz /projects/cangen/milos/sc/Cleidson/S03334_T_FF_01_test 0 10 hg 0.5 0.5 0.5 8 24)
+#
+### S H A L L O W   S E Q. ### 
+# Dec. 21
+#PEC_JB_1.fastq.gz PEC_JB_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/PEC_JB 0 12 hg 0.5 0.5 0.5 12 24 10000
+#S03516_T_FF_41_1.fastq.gz S03516_T_FF_41_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/S03516_T_FF_41 7 12 hg 0.5 0.5 0.5 12 24 10000 6000
+#S03856_1.fastq.gz S03856_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/S03856 2 12 hg 0.5 0.5 0.5 12 24 10000
+
+
 scVelo workflow at a glance
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Import scvelo as::

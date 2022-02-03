@@ -2,13 +2,60 @@ Getting Started
 ---------------
 
 Here, you will be briefly guided through the basics of how to use M3K.
-Once you are set, the following tutorials go straight into analysis of RNA velocity,
-latent time, driver identification and many more.
 
-First of all, the input data for scVelo are two count matrices of pre-mature (unspliced) and mature (spliced) abundances,
-which can be obtained from standard sequencing protocols, using the `velocyto`_ or `loompy/kallisto`_
-counting pipeline.
+First of all, the input data for M3K are ...
 
+Generating genome indexes
+^^^^^^^^^^^^^^^^^^^^^^^^^
+To generate the reference indexes it is necessary to have the **fasta sequence** and the **annotation GTF** file. We recommend this to be the first step because M3K depends on index to do the alignment step. 
+
+M3K can be used in two main cases:
+1) Data contains only *Homo sapiens* sequences;
+2) The data contains a mixture of *Homo sapiens* and *Mus musculus* sequences.
+
+So, it is necessary to create the indexes according to the user's needs.
+
+For this, the **STAR** software is used to create the index as can be seen in the example below::
+
+    STAR --runThreadN {threads.number} --runMode genomeGenerate --genomeDir {path.to.indexDir --genomeFastaFiles {fasta.reference} --sjdbGTFfile {gtf.reference} --sjdbOverhang 100 --outFileNamePrefix {index.prefix}
+
+We provide in this `link <>`_ ready-made references for *Homo sapiens* and *Mus musculus*.
+
+
+Modifying *config_paths.sh* file
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+After cloning the M3K repository and accessing this folder, there is a file called *config_paths.sh*. We will need to edit this file according to the user's specifications. The file looks like this below::
+
+    #!/bin/bash
+
+    ### Paths (for execution on Cluster - to be setup by the user)
+    export fastqc="/path/to/fastqc"
+    export star="/path/to/STAR"
+    export samtools="/path/to/samtools"
+    export hg19_dir="/path/to/hsaIndex"
+    export mm10_dir="/path/to/mmIndex"
+    export gtf_hg19_mn="path/to/hsa_gtf_reference"
+    export gtf_mm10_mn="path/to/mm_gtf_reference"
+
+    ### Locally used file paths - no need to be changed by the user
+    export bc_v2="barcodes-737K-august-2016.txt"
+    export bc_v3="barcodes-3M-february-2018.txt"
+    export version="0.341"
+    export gzip="gzip.sh"
+
+To start, the user needs to change the paths of the *fastqc*, *star* and *samtools* softwares (hint: type `which fastq` which will return the path).
+
+Then it will be necessary to modify the reference paths for *Homo sapiens* and *Mus musculus*. The specified path will be the same used in the `--genomeDir` parameter plus the `--outFileNamePrefix` parameter (for example: if I used the `--genomeDir` parameter as **/path/to/index** and the `--outFileNamePrefix` parameter as **hg19**, I will replace it in the file *config_paths.sh* the variable *hg19_dir* by **/path/to/index/gh19**). The same logic mentioned above must be considered if it is necessary to create an index for *Mus musculus*.
+
+Finally it will be necessary to modify the variables *gtf_hg19_mn* and *gtf_mm10_mn* according to the path of the GTF file used to create the index (file passed to the `--sjdbGTFfile` parameter).
+
+
+Run for a single sample
+^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Run for a multiple samples
+^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 function help_msg() {
@@ -55,8 +102,11 @@ function help_msg() {
 #S03856_1.fastq.gz S03856_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/S03856 2 12 hg 0.5 0.5 0.5 12 24 10000
 
 
-scVelo workflow at a glance
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+
+
+
 Import scvelo as::
 
     import scvelo as scv

@@ -17,7 +17,6 @@ Check out the :doc:`usage` section for further information, including how to :re
 
    about
    installation
-   api
    release_notes
 
 .. toctree::

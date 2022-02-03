@@ -69,33 +69,38 @@ Running M3K for a single sample
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 The parameters available to run M3K for a single sample are as follows:
 
-- ``-f1``: Path to read 1 file
-- ``-f2``: Path to read 2 file
-- ``-o``: Path to output folder
-- ``-m``: Module to run [default: 0]
-- ``-u``: UMI length. Choose 10 if using v2 from 10x or 12 if using v3. [default: 10]
-- ``-sp1``: Smooting parameter [default: 0.5]
-- ``-sp2``: Smooting parameter [default: 0.5]
-- ``-sp3``: Smooting parameter [default: 0.5]
-- ``-t``: Number of threads [default: 12]
-- ``-c``: Number of chunks to split fastq file [default: 24]
+- ``-f1`` or ``--file1``: Path to read 1 file
+- ``-f2`` or ``--file2``: Path to read 2 file
+- ``-o`` or ``--outpath``: Path to output folder
+- ``-m`` or ``--module``: Module to run [default: 0]
+- ``-u`` or ``--umi``: UMI length. 10 or 12 nts (depending on 10x chemistry). [default: 10]
+- ``g`` or ``--genome``: Genome (hg, mm or pdx)
+- ``-sp1`` or ``--smoothing1``: Smooting parameter [default: 0.5]
+- ``-sp2`` or ``smoothing2``: Smooting parameter [default: 0.5]
+- ``-sp3`` or ``smoothing3``: Smooting parameter [default: 0.5]
+- ``-t`` or ``--threads``: Number of threads [default: 12]
+- ``-c`` or ``--chunks``: Number of chunks to split fastq file [default: 24]
+- ``ct`` or ``--cutoff``: [default: 10000]
+- ``vct`` or ``--vcutoff``: Viable number of cells [default: 0]
+- ``cct`` or ``--ccutoff``: Contaminated cells [default: 0]
 
 Once this is done, just type::
-    
-    sh run_m3k.sh -f1 /path/to/sample_R1.fastq.gz -f2 /path/to/sample_R2.fastq.gz 
-    -o /path/to/output -m [number of desired module] -u [v2 uses 10 and v3 uses 12] 
-    -sp1 0.5 -sp2 0.5 -sp3 0.5 -t [number of threads] -c [number of chuncks]
+
+    sh run_m3k.sh --file1 /path/to/sample_R1.fastq.gz --file2 /path/to/sample_R2.fastq.gz 
+    --outpath /path/to/output --module [number of desired module] --umi [10 or 12 nts] 
+    --genome hg --smoothing1 0.5 --smoothing2 0.5 --smoothing3 0.5 --threads [number of threads] 
+    --chuncks [number of chuncks] --cutoff 10000 --vcutoff 0 ccutoff 0
 
 
 Running M3K for multiple samples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-run_many.sh <input.conf>
+To run multiple samples just create the ``input.conf`` file in the following format:
 
-- input.conf:
-### DO NOT LEAVE ANY EMPTY ROWS ### (command example: S03334_T_FF_01_1.fastq.gz S03334_T_FF_01_2.fastq.gz /projects/cangen/milos/sc/Cleidson/S03334_T_FF_01_test 0 10 hg 0.5 0.5 0.5 8 24)
-#
-### S H A L L O W   S E Q. ### 
-# Dec. 21
-#PEC_JB_1.fastq.gz PEC_JB_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/PEC_JB 0 12 hg 0.5 0.5 0.5 12 24 10000
-#S03516_T_FF_41_1.fastq.gz S03516_T_FF_41_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/S03516_T_FF_41 7 12 hg 0.5 0.5 0.5 12 24 10000 6000
-#S03856_1.fastq.gz S03856_2.fastq.gz /projects/cangen/milos/sc/shallow_seq/S03856 2 12 hg 0.5 0.5 0.5 12 24 10000
+    sample1_R1.fastq.gz sample1_R2.fastq.gz /path/to/output_sample1 0 10 hg 0.5 0.5 0.5 8 24 10000
+    sample2_R1.fastq.gz sample2_R2.fastq.gz /path/to/output_sample2 0 12 mm 0.5 0.5 0.5 8 36 20000
+    sample3_R1.fastq.gz sample3_R2.fastq.gz /path/to/output_sample3 0 12 pdx 0.5 0.5 0.5 8 36 20000
+
+Comments can be made using the ``#`` character. Do not leave any empty lines in the above file.
+
+After that, just type the following command::
+    run_many.sh /path/to/input.conf

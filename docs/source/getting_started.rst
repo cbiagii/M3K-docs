@@ -81,6 +81,7 @@ The parameters available to run M3K for a single sample are as follows:
 - ``-c``: Number of chunks to split fastq file [default: 24]
 
 Once this is done, just type::
+    
     sh run_m3k.sh -f1 /path/to/sample_R1.fastq.gz -f2 /path/to/sample_R2.fastq.gz 
     -o /path/to/output -m [number of desired module] -u [v2 uses 10 and v3 uses 12] 
     -sp1 0.5 -sp2 0.5 -sp3 0.5 -t [number of threads] -c [number of chuncks]

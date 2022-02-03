@@ -26,3 +26,4 @@ Check out the :doc:`usage` section for further information, including how to :re
    :hidden:
 
    getting_started
+   case01

@@ -17,7 +17,9 @@ So, it is necessary to create the indexes according to the user's needs.
 
 For this, the **STAR** software is used to create the index as can be seen in the example below::
 
-    STAR --runThreadN {threads.number} --runMode genomeGenerate --genomeDir {path.to.indexDir --genomeFastaFiles {fasta.reference} --sjdbGTFfile {gtf.reference} --sjdbOverhang 100 --outFileNamePrefix {index.prefix}
+    STAR --runThreadN {threads.number} --runMode genomeGenerate --genomeDir {path.to.indexDir 
+    --genomeFastaFiles {fasta.reference} --sjdbGTFfile {gtf.reference} --sjdbOverhang 100 
+    --outFileNamePrefix {index.prefix}
 
 We provide in this `link <>`_ ready-made references for *Homo sapiens* and *Mus musculus*.
 
@@ -43,19 +45,19 @@ After cloning the M3K repository and accessing this folder, there is a file call
     export version="0.341"
     export gzip="gzip.sh"
 
-To start, the user needs to change the paths of the *fastqc*, *star* and *samtools* softwares (hint: type `which fastq` which will return the path).
+To start, the user needs to change the paths of the *fastqc*, *star* and *samtools* softwares (hint: type ``which fastq`` which will return the path).
 
-Then it will be necessary to modify the reference paths for *Homo sapiens* and *Mus musculus*. The specified path will be the same used in the `--genomeDir` parameter plus the `--outFileNamePrefix` parameter (for example: if I used the `--genomeDir` parameter as **/path/to/index** and the `--outFileNamePrefix` parameter as **hg19**, I will replace it in the file *config_paths.sh* the variable *hg19_dir* by **/path/to/index/gh19**). The same logic mentioned above must be considered if it is necessary to create an index for *Mus musculus*.
+Then it will be necessary to modify the reference paths for *Homo sapiens* and *Mus musculus*. The specified path will be the same used in the ``--genomeDir`` parameter plus the ``--outFileNamePrefix`` parameter (for example: if I used the ``--genomeDir`` parameter as **/path/to/index** and the ``--outFileNamePrefix`` parameter as **hg19**, I will replace it in the file *config_paths.sh* the variable *hg19_dir* by **/path/to/index/gh19**). The same logic mentioned above must be considered if it is necessary to create an index for *Mus musculus*.
 
-Finally it will be necessary to modify the variables *gtf_hg19_mn* and *gtf_mm10_mn* according to the path of the GTF file used to create the index (file passed to the `--sjdbGTFfile` parameter).
-
-
-Run for a single sample
-^^^^^^^^^^^^^^^^^^^^^^^
+Finally it will be necessary to modify the variables *gtf_hg19_mn* and *gtf_mm10_mn* according to the path of the GTF file used to create the index (file passed to the ``--sjdbGTFfile`` parameter).
 
 
-Run for a multiple samples
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Running M3K for a single sample
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
+Running M3K for multiple samples
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 
 function help_msg() {

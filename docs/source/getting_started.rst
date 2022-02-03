@@ -94,13 +94,14 @@ Once this is done, just type::
 
 Running M3K for multiple samples
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-To run multiple samples just create the ``input.conf`` file in the following format:
+To run multiple samples just create the ``input.conf`` file in the following format::
 
-    sample1_R1.fastq.gz sample1_R2.fastq.gz /path/to/output_sample1 0 10 hg 0.5 0.5 0.5 8 24 10000
-    sample2_R1.fastq.gz sample2_R2.fastq.gz /path/to/output_sample2 0 12 mm 0.5 0.5 0.5 8 36 20000
-    sample3_R1.fastq.gz sample3_R2.fastq.gz /path/to/output_sample3 0 12 pdx 0.5 0.5 0.5 8 36 20000
+    sample1_R1.fastq.gz sample1_R2.fastq.gz /path/to/output_sample1 0 10 hg 0.5 0.5 0.5 8 24 10000 2500
+    sample2_R1.fastq.gz sample2_R2.fastq.gz /path/to/output_sample2 0 12 mm 0.5 0.5 0.5 8 36 20000 5000
+    sample3_R1.fastq.gz sample3_R2.fastq.gz /path/to/output_sample3 0 12 pdx 0.5 0.5 0.5 8 36 20000 3000
 
 Comments can be made using the ``#`` character. Do not leave any empty lines in the above file.
 
 After that, just type the following command::
+    
     run_many.sh /path/to/input.conf

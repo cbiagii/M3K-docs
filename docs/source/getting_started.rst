@@ -55,7 +55,7 @@ Finally it will be necessary to modify the variables *gtf_hg19_mn* and *gtf_mm10
 
 Available modules on command line
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-There are 8 modules (0 to 8) available in M3K as shown below:
+There are 8 modules (0 to 8) available in M3K command line as shown below:
 
 - **0**: Whole pipeline and QC reports;
 - **1**: Split fastq files;

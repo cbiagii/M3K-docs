@@ -10,8 +10,9 @@ Generating genome indexes
 To generate the reference indexes it is necessary to have the **fasta sequence** and the **annotation GTF** file. We recommend this to be the first step because M3K depends on index to do the alignment step. 
 
 M3K can be used in two main cases:
-1) Data contains only *Homo sapiens* sequences;
-2) The data contains a mixture of *Homo sapiens* and *Mus musculus* sequences.
+
+1. Data contains only *Homo sapiens* sequences;
+2. The data contains a mixture of *Homo sapiens* and *Mus musculus* sequences.
 
 So, it is necessary to create the indexes according to the user's needs.
 
@@ -55,6 +56,7 @@ Finally it will be necessary to modify the variables *gtf_hg19_mn* and *gtf_mm10
 Available modules on command line
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 There are 8 modules (0 to 8) available in M3K as shown below:
+
 - **0**: Whole pipeline and QC reports;
 - **1**: Split fastq files;
 - **2**: Extract and correct barcodes;
@@ -104,4 +106,4 @@ Comments can be made using the ``#`` character. Do not leave any empty lines in 
 
 After that, just type the following command::
     
-    run_many.sh /path/to/input.conf
+    sh run_many.sh /path/to/input.conf

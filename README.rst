@@ -1,9 +1,8 @@
-Template for the Read the Docs tutorial
+M3K tutorial
 =======================================
 
-This GitHub template includes fictional Python library
-with some basic Sphinx docs.
+This GitHub contains the M3K documentation.
 
-Read the tutorial here:
+Read the documentation here:
 
-https://docs.readthedocs.io/en/stable/tutorial/
+https://m3k-docs.readthedocs.io/en/latest

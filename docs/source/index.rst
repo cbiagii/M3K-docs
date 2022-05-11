@@ -25,4 +25,5 @@ Check out the :doc:`usage` section for further information, including how to :re
    :hidden:
 
    getting_started
-   real_data
+   single_organism_example
+   mixed_organism_example

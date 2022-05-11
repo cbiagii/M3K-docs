@@ -6,4 +6,4 @@ Release Notes
 
 Version 0.341 :small:`Jan 31, 2022`
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-First alpha release of scvelo.
+First alpha release of M3K.
